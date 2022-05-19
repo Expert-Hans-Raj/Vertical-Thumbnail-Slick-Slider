@@ -1,0 +1,34 @@
+<section class="banner-section desktop-view">
+  <div class="container">
+    <div class="vehicle-detail-banner banner-content clearfix">
+      <div class="banner-slider">
+
+        <div class="slider slider-nav thumb-image">
+          {%- for media in product.media -%}
+          <div class="thumbnail-image">
+            <div class="thumbImg">
+              <img src="{{ media | image_url: original}} " alt="slider-img">
+            </div>
+
+          </div>{% endfor %}
+        </div>
+        <div class="slider slider-for">
+          {%- for media in product.media -%}
+          <div class="slider-banner-image">
+            <img  onclick="onClick(this)" src="{{ media | image_url: original}} " alt="Car-Image">
+          </div> 
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--     -->
+  <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img id="img01" style="width:100%">
+    </div>
+  </div>
+  <!--     -->
+</section>
+<!-- End User this HTML for Slider -->
