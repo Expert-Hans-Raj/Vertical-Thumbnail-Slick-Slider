@@ -1,14 +1,28 @@
 
+
+/* Media Thumbnail Slider */
+$(document).ready(function(){
+  
+/* Product Media*/
+function onClick(element) {
+  var img = document.getElementById("img01").src = element.src;
+  
+  document.getElementById("modal01").style.display = "block";
+}
+/* Product Media*/
+
+/* Media Thumbnail Slider */
 $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     fade: true,
     asNavFor: '.slider-nav'
 });
 $('.slider-nav').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: true,
     vertical:true,
     asNavFor: '.slider-for',
     dots: false,
@@ -43,3 +57,8 @@ $('.slider-nav').slick({
     }
     ]
 });
+/* Media Thumbnail Slider */ 
+
+  
+  });
+/* Media Thumbnail Slider */ 
